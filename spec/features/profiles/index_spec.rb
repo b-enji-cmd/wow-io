@@ -5,5 +5,12 @@ RSpec.describe "As a user" do
 		it "lists profiles" do
 			visit "/profiles"
 		end
+
+		it "contains a link to create a new profile" do
+			visit "/profiles"
+			expect(page).to have_link("Create a Profile")
+			click_link("Create a Profile")
+			expect(current_path).to eq("/profiles/new")
+		end
 	end
 end
