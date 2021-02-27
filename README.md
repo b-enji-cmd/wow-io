@@ -1,4 +1,4 @@
-![WOWIO](https://imgur.com/wqYBooI)
+![](https://imgur.com/wqBOJLf.png)
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
@@ -38,7 +38,7 @@
 
 
 ## Database Design Document
-![Database Design Document](https://imgur.com/rR0CyuJ)
+![Database Design Document](https://imgur.com/rR0CyuJ.png)
 
 
 <!-- GETTING STARTED -->
