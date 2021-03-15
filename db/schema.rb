@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_15_032338) do
+ActiveRecord::Schema.define(version: 2021_03_15_033544) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,13 @@ ActiveRecord::Schema.define(version: 2021_03_15_032338) do
     t.index ["profile_id"], name: "index_characters_on_profile_id"
   end
 
+  create_table "profile_characters", force: :cascade do |t|
+    t.bigint "profile_id"
+    t.bigint "character_id"
+    t.index ["character_id"], name: "index_profile_characters_on_character_id"
+    t.index ["profile_id"], name: "index_profile_characters_on_profile_id"
+  end
+
   create_table "profiles", force: :cascade do |t|
     t.string "username"
     t.datetime "created_at", null: false
@@ -31,4 +38,6 @@ ActiveRecord::Schema.define(version: 2021_03_15_032338) do
   end
 
   add_foreign_key "characters", "profiles"
+  add_foreign_key "profile_characters", "characters"
+  add_foreign_key "profile_characters", "profiles"
 end
