@@ -12,5 +12,6 @@ RSpec.describe "As a user" do
 			click_link("Create a Profile")
 			expect(current_path).to eq("/profiles/new")
 		end
+
 	end
 end
