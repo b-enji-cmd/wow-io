@@ -13,7 +13,7 @@ RSpec.describe "As a user" do
 		it "contains a link to add a new character" do
 			visit profile_path(@profile_1)
 			expect(page).to have_link("Create a Profile")
-			click_link("Create a Profile")
+			click_link("Add Profile")
 			expect(current_path).to eq("/profiles/new")
 		end
 
