@@ -1,0 +1,8 @@
+<h1><%= @profile.username%>'s profile</h1>
+<%= link_to "Add Character", new_profile_character_path(@profile), method: :get, local: :true   %><br>
+<h4>Characters</h4>
+<section id = "characters">
+	<% @profile.characters.each do |character|%>
+		<p>Coming soon</p>
+	<% end %>
+</section>	
