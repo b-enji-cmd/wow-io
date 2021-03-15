@@ -1,0 +1,2 @@
+class ProfileCharactersController < ApplicationController
+end

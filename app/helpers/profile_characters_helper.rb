@@ -1,0 +1,2 @@
+module ProfileCharactersHelper
+end
