@@ -1,0 +1,6 @@
+
+<% if current_user %>
+  <p> Welcome back! </p>
+<% else %>
+  <%= link_to 'sign in with battle.net', signin_path(:bnet) %>
+<% end %>
