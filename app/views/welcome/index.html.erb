@@ -1,6 +1,25 @@
 
 <% if current_user %>
-  <p> Welcome back! </p>
+  
+  <div class="container-fluid outline">
+  <div class="row">
+    <div class="col-sm">
+      <p> One of three columns</p>
+      
+    </div>
+    <div class="col-sm">
+      <p> One of three columns</p>
+    </div>
+    <div class="col-sm">
+       <p> One of three columns</p>
+    </div>
+  </div>
+</div>
+
 <% else %>
-  <%= link_to 'sign in with battle.net', signin_path(:bnet) %>
+ 
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <%= link_to 'BNet Login', signin_path(:bnet), class: "btn btn-primary" %>   
+  </div>
+
 <% end %>
