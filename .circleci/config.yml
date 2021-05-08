@@ -12,7 +12,7 @@ jobs:
       - run:
           name: Which bundler?
           command: bundle -v
-        run:
+      - run:
           name: Set Ruby Version
           command:  echo "ruby-2.5.3" > ~/.ruby-version
       - ruby/bundle-install
