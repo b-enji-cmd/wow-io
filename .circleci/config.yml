@@ -15,4 +15,7 @@ jobs:
       - run:
           name: Set Ruby Version
           command:  echo "ruby-2.5.3" > ~/.ruby-version
-      - ruby/bundle-install
+      - run: 
+          name: Bundle Install
+          command: bundle install
+      
