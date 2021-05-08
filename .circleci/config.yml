@@ -5,11 +5,18 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.6.3-stretch-node
+      - image: circleci/ruby:2.5.3-stretch-node
     executor: ruby/default
     steps:
       - checkout
       - run:
           name: Which bundler?
           command: bundle -v
-      - ruby/bundle-install
+      - run:
+          name: Set Ruby Version
+          command:  echo "ruby-2.5.3" > ~/.ruby-version
+
+      - run: 
+          name: Bundle Install
+          command: bundle install
+      
